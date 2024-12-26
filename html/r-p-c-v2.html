@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-practice 🌟</title>
+
+  <link rel="icon" href="/img/草18.png">
+
+  <!-----   CSS Reset   ----->
+
+  <link rel="stylesheet" href="/css/reset.css">
+
+  <!-----   CSS   ----->
+
+  <link rel="stylesheet" href="/css/page-css/r-p-c-v2.css">
+
+  <!-----   Font Family   ----->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!---------------------------------------------->
+  <!---------------------------------------------->
+  <!---------------------------------------------->
+  <!-----      it links with a JS file       ----->
+  <!-----    but i write js code in html !   ----->
+  <!---------------------------------------------->
+  <!-----   有連接 JS檔 但我寫在 html 裡面 !   ----->
+  <!---------------------------------------------->
+  <!---------------------------------------------->
+  <!---------------------------------------------->
+
+
+<div class="box">
+  <h1>Rock Paper Scissors V2</h1>
+  <h2>Add Function</h2>
+
+  <div class="button-box">
+    <button
+      onclick="
+        playGame('rock');
+      ">Rock</button>
+
+
+
+    <button
+      onclick="
+        playGame('paper');
+      ">Paper</button>
+
+
+    
+    <button
+      onclick="
+        playGame('scissors');
+      ">Scissors</button>
+  </div>
+
+
+
+  <div class="a-box">
+    <a class="applea" href="./index.html">Ver.1</a>
+    <a class="applea" href="./r-p-c-v3.html">Ver.3</a>
+    <a class="applea" href="./r-p-c-v4.html">Ver.4</a>
+    <a class="applea" href="./r-p-c-v5.html">Ver.5</a>
+    <a class="applea mt" href="./r-p-c-final.html">Ver.final</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-----   Java Script   ----->
+
+  <script src="/JS/r-p-c-v2.js"></script>
+
+  
+  <!-----   出拳對決並跳出結果功能   ----->
+  
+  <script>
+
+
+    /////     playGame and pop the result   /////
+    /////      對決電腦出拳並跳出結果功能     /////
+
+
+    function playGame (playerMove) {
+      computerMove = pickComputerMove();
+
+      let result = '';
+
+      if (playerMove === 'scissors') {
+        if (computerMove === 'rock') {
+          result = 'You lose.';
+        } else if (computerMove === 'paper') {
+          result = 'You win.';
+        } else if (computerMove === 'scissors') {
+          result = 'Tie.';
+        }
+
+      } else if (playerMove === 'paper') {
+        if (computerMove === 'rock') {
+          result = 'You win.';
+        } else if (computerMove === 'paper') {
+          result = 'Tie.';
+        } else if (computerMove === 'scissors') {
+          result = 'You lose.'
+        }
+
+      } else if (playerMove === 'rock') {
+        if (computerMove === 'rock') {
+          result = 'Tie.';
+        } else if (computerMove === 'paper') {
+          result = 'You lose.';
+        } else if (computerMove === 'scissors') {
+          result = 'You win.'
+        }
+      }
+
+      /////   pop result part   /////
+      /////   跳出對決結果區塊   /////
+
+      alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
+    }
+    
+
+    /////   computerMove function   /////
+    /////        電腦出拳功能        /////
+
+
+    function pickComputerMove () {
+      const randomNumber = Math.random();
+
+      let computerMove = '';
+
+      if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerMove = 'rock';
+      } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerMove = 'paper';
+      } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        computerMove = 'scissors';
+      }
+
+      return computerMove;
+    }
+  </script>
+</body>
+</html>

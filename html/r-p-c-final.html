@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-practice 🌟</title>
+
+  <link rel="icon" href="/img/草18.png">
+
+  <!-----   CSS Reset   ----->
+
+  <link rel="stylesheet" href="/css/reset.css">
+
+  <!-----   CSS   ----->
+
+  <link rel="stylesheet" href="/css/page-css/r-p-c-final.css">
+
+  <!-----   Font Family   ----->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="box">
+    <h1>Rock Paper Scissors Final！</h1>
+
+    <div class="button-box">
+      <button
+        onclick="
+          playGame('rock');
+        ">
+        <img class="icon" src="/img/rock-emoji.png" alt="rock-icon">  
+      </button>
+
+
+
+      <button
+        onclick="
+          playGame('paper');
+        ">
+        <img class="icon" src="/img/paper-emoji.png" alt="paper-icon">  
+      </button>
+
+
+      
+      <button
+        onclick="
+          playGame('scissors');
+        ">
+        <img class="icon" src="/img/scissors-emoji.png" alt="scissors-icon">  
+      </button>
+
+
+
+      <button
+        onclick="
+          score.wins = 0;
+          score.losses = 0;
+          score.ties = 0;
+
+          localStorage.removeItem('score');
+
+          document.querySelector('.js-result').innerHTML = '';
+          document.querySelector('.js-moves').innerHTML = '';
+
+          updateScoreElement();
+        ">Reset Score</button>
+    </div>
+
+
+
+    <div class="p-box">
+      <p class="js-moves"></p>
+      <p class="js-result"></p>
+      <p class="js-score"></p>
+    </div>
+
+
+
+    <div class="a-box">
+      <a class="applea" href="./index.html">Ver.1</a>
+      <a class="applea" href="./r-p-c-v2.html">Ver.2</a>
+      <a class="applea" href="./r-p-c-v3.html">Ver.3</a>
+      <a class="applea" href="./r-p-c-v4.html">Ver.4</a>
+      <a class="applea" href="./r-p-c-v5.html">Ver.5</a>
+    </div>
+  </div>
+
+
+
+<!---------------------------------------------->
+<!---------------------------------------------->
+<!---------------------------------------------->
+<!-------------     Java Script     ------------>
+<!---------------------------------------------->
+<!---------------------------------------------->
+<!---------------------------------------------->
+
+
+
+
+  <script src="/JS/r-p-c-final.js"></script>
+</body>
+</html>

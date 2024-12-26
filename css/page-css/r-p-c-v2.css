@@ -1,0 +1,148 @@
+body {
+  font-family: 'Roboto';
+
+  background-color: rgb(35, 35, 90);
+
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  line-height: 1.2;
+  letter-spacing: 0.3rem;
+}
+
+
+
+a {
+  text-decoration: none;
+  
+
+  &:active {
+    color: rgb(0, 0, 0);
+  }
+}
+
+
+
+.a-box {
+  display: flex;
+
+  flex-wrap: wrap;
+  gap: 2%;
+
+  width: 100%;
+}
+
+
+
+.applea {
+  background-color: rgb(43, 0, 130);
+  padding: 2% 4%;
+
+  width: 100%;
+
+  flex: 1;
+
+  color: rgb(220, 220, 220);
+  font-size: 2rem;
+  font-weight: bold;
+
+  text-align: center;
+
+  border-radius: 10px;
+
+  transition: box-shadow 0.3s ease,
+              transform 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 15px 3px rgb(1, 5, 95);
+
+    transform: translateY(-3px);
+  }
+}
+
+
+
+.mt {
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+.box {
+  width: 50%;
+  height: 50%;
+
+  background-color: rgb(255, 216, 150);
+
+  box-shadow: 0 0 20px 10px rgb(255, 255, 255);
+
+  padding: 3% 6%;
+
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5%;
+}
+
+
+
+.box h1 {
+  font-size: 64px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+.box h2 {
+  font-size: 64px;
+  font-weight: bold;
+
+  color: rgb(255, 54, 54);
+
+  text-decoration: underline;
+  text-shadow: 2px 2px 2px black;
+}
+
+
+
+.button-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 90%;
+}
+
+
+
+.button-box button {
+  width: 30%;
+  font-size: 2.5rem;
+  color:rgb(0, 0, 0);
+
+  padding: 2% 4%;
+  border-radius: 10px;
+
+  background-color: rgb(255, 185, 94);
+  border: 3px solid rgb(144, 16, 16);
+
+  transition: box-shadow 0.3s ease,
+              transform  0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+
+    transform: translateY(-3px) translateX(-3px);
+    box-shadow: 4px 4px 5px black;
+  }
+}
